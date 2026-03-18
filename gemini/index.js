@@ -309,7 +309,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       messages.push({ role: "user", content: args.prompt });
 
       const completion = await gemini.chat.completions.create({
-        model: "gemini-3-pro-preview",
+        model: "gemini-3.1-pro-preview",
         messages,
         temperature: args.temperature || 0.7,
         max_tokens: args.max_tokens || 16384,
